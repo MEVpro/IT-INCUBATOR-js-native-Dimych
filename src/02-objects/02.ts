@@ -1,12 +1,25 @@
 // Objects training
+type addressType = {
+    streetName: string,
+    city: Array<cityType>
+}
 type cityType = {
     title: string
     country: string
 }
+type roomsType = {
+    id: number,
+    roomName: string,
+    square: number,
+    ready: boolean,
+    color: string,
+    people: Array<string>
+}
 type officeType = {
-    id: number
+    name: number
     roomsCount: number
-    rooms:
+    address: Array<addressType>
+    rooms: Array<roomsType>
 }
 export const office = {
     name: 1607,
@@ -35,7 +48,5 @@ export const office = {
             color: "white",
             people: ["Саша", "Лена", "Таня", "Женя"]
         }
-
     ]
-
 }
